@@ -15,7 +15,6 @@ public class MazeStageMove : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             mousePosition = Camera.main.ScreenToViewportPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z) * add);
-            Debug.Log(mousePosition);
         }
         if (Input.GetMouseButton(0))
         {
