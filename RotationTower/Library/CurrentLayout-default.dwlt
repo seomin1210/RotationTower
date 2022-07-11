@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Hierarchy
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 492}
+  m_MinSize: {x: 875, y: 471}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 781
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 471}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -121,10 +121,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 910, y: 442}
-  m_MaxSize: {x: 22005, y: 10021}
+  m_MinSize: {x: 908, y: 421}
+  m_MaxSize: {x: 22003, y: 10000}
   vertical: 0
-  controlID: 4160
+  controlID: 11815
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,10 +146,10 @@ MonoBehaviour:
     y: 0
     width: 826.4
     height: 731
-  m_MinSize: {x: 201, y: 442}
-  m_MaxSize: {x: 4001, y: 8042}
+  m_MinSize: {x: 201, y: 421}
+  m_MaxSize: {x: 4001, y: 8021}
   vertical: 1
-  controlID: 4227
+  controlID: 11785
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,10 +226,10 @@ MonoBehaviour:
     y: 0
     width: 201.6
     height: 731
-  m_MinSize: {x: 202, y: 321}
-  m_MaxSize: {x: 4002, y: 8021}
+  m_MinSize: {x: 202, y: 342}
+  m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 4139
+  controlID: 11742
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,8 +249,8 @@ MonoBehaviour:
     y: 0
     width: 201.6
     height: 487.2
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -275,8 +275,8 @@ MonoBehaviour:
     y: 487.2
     width: 201.6
     height: 243.79999
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -327,8 +327,8 @@ MonoBehaviour:
     y: 0
     width: 276
     height: 731
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
@@ -459,9 +459,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -34.93409, y: -28.752306, z: -6.153839}
+    m_Target: {x: -36.32859, y: -40.598183, z: 1.388093}
     speed: 2
-    m_Value: {x: -34.93409, y: -28.752306, z: -6.153839}
+    m_Value: {x: -36.32859, y: -40.598183, z: 1.388093}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -508,9 +508,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.25733668, y: -0.6798391, z: 0.2787467, w: 0.6276361}
+    m_Target: {x: 0.30498084, y: -0.5956275, z: 0.2610787, w: 0.69576526}
     speed: 2
-    m_Value: {x: 0.2573328, y: -0.6798289, z: 0.27874252, w: 0.62762666}
+    m_Value: {x: -0.30498084, y: 0.5956275, z: -0.26107866, w: -0.6957652}
   m_Size:
     m_Target: 32.6134
     speed: 2
@@ -622,13 +622,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73.6
-    width: 825
+    width: 825.4
     height: 363
   m_ViewDataDictionary: {fileID: 0}
   m_MixersTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
-    m_LastClickedID: 21684
+    m_LastClickedID: -16536
     m_ExpandedIDs: 12eb343c
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -744,11 +744,11 @@ MonoBehaviour:
       oldMaxSizes: 
       oldSplitSize: 0
     m_HorizontalSplitter:
-      ID: 45
+      ID: 7128
       splitterInitialOffset: 0
       currentActiveSplitter: -1
       realSizes:
-      - 247.2
+      - 248
       - 577.6
       relativeSizes:
       - 0.3
@@ -759,7 +759,7 @@ MonoBehaviour:
       maxSizes:
       - 0
       - 0
-      lastTotalSize: 824.8
+      lastTotalSize: 825.6
       splitSize: 6
       xOffset: 0
       m_Version: 1
@@ -800,7 +800,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 16128
+  m_LastSelectedObjectID: -27864
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -831,7 +831,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6efbffff
+      m_ExpandedIDs: f0b8ffff18baffff46c8ffff66c8ffff6ec9ffff12dfffff6efbffff003f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -918,22 +918,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/01. Scripts
+    - Assets/Minimalist Map Builder/Scripts/Map Builder
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/01. Scripts
+  - Assets/Minimalist Map Builder/Scripts/Map Builder
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\USER\Documents\RotationTower\RotationTower
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 423f0000
-    m_LastClickedID: 16194
-    m_ExpandedIDs: 000000003e3f000000ca9a3b
+    m_SelectedIDs: f0510000
+    m_LastClickedID: 20976
+    m_ExpandedIDs: 000000003e3f00004a4d0000dc510000e2510000ec510000f251000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -961,7 +961,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003e3f000000ca9a3b
+    m_ExpandedIDs: 000000003e3f00004a4d0000dc510000e2510000f251000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -988,8 +988,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: 2a5e00000aabffffae870000d24e0000000000001660000044f4ffff58f4ffff9650000082530000e05a0000b4540000b2200000
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: 2a5e00000aabffffae870000d24e0000000000001660000044f4ffff58f4ffff9650000082530000e05a0000b4540000b220000068bfffff
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

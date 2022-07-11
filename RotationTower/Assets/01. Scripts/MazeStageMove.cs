@@ -8,9 +8,10 @@ public class MazeStageMove : MonoBehaviour
     private Vector3 mousePosition = Vector3.zero;
     private Vector3 newMousePosition = Vector3.zero;
 
+
     private void Update()
     {
-        
+
         if (Input.GetMouseButtonDown(0))
         {
             mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
@@ -24,15 +25,26 @@ public class MazeStageMove : MonoBehaviour
                 else if (newMousePosition.x <= -30f) newMousePosition.x = -30f;
                 if (newMousePosition.y >= 30f) newMousePosition.y = 30f;
                 else if (newMousePosition.y <= -30f) newMousePosition.y = -30f;
-                //MoveStage(newMousePosition - mousePosition);
+                MoveStage(newMousePosition - mousePosition);
             }
         }
     }
 
-    //protected override void MoveStage(Vector3 pos)
+    protected virtual void MoveStage(Vector3 pos)
+    {
+
+        this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.Euler(pos.y, 0f, -pos.x), 1f * Time.deltaTime);
+    }
+
+    //void Start()
     //{
-    //    this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.Euler(pos.y, 0f, pos.x), 1f * Time.deltaTime);
+    //    Input.gyro.enabled = true;
     //}
 
+    //// Update is called once per frame
+    //void Update()
 
+    //{
+    //    transform.Rotate(Input.gyro.rotationRateUnbiased.x, Input.gyro.rotationRateUnbiased.y, Input.gyro.rotationRateUnbiased.z);
+    //}
 }
