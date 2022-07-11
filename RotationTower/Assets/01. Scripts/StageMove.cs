@@ -19,4 +19,16 @@ public class StageMove : MonoBehaviour
                 this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.Euler(newMousePosition.y - mousePosition.y, 0f, mousePosition.x - newMousePosition.x), 1f * Time.deltaTime);
         }
     }
+
+    //void Start()
+    //{
+    //    Input.gyro.enabled = true;
+    //}
+
+    //// Update is called once per frame
+    //void Update()
+
+    //{
+    //    transform.Rotate(Input.gyro.rotationRateUnbiased.x, Input.gyro.rotationRateUnbiased.y, Input.gyro.rotationRateUnbiased.z);
+    //}
 }
