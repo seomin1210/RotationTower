@@ -33,7 +33,6 @@ public class MazeStageMove : MonoBehaviour
         if (pos.x >= 30f) pos.x = 30f;
         else if (pos.x <= -30f) pos.x = -30f;
         this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.Euler(pos.y, 0f, -pos.x), 1f * Time.deltaTime);
-        
     }
 
     //void Start()
@@ -41,9 +40,7 @@ public class MazeStageMove : MonoBehaviour
     //    Input.gyro.enabled = true;
     //}
 
-    //// Update is called once per frame
     //void Update()
-
     //{
     //    transform.Rotate(Input.gyro.rotationRateUnbiased.x, Input.gyro.rotationRateUnbiased.y, Input.gyro.rotationRateUnbiased.z);
     //}
