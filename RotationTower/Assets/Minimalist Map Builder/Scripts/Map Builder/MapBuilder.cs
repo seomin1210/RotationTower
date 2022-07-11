@@ -53,6 +53,7 @@ public class MapBuilder : MonoBehaviour
 
     private void Awake()
     {
+        //∫ÙµÂ«“∂© ¡÷ºÆ√≥∏Æ
         if (PrefabUtility.IsPartOfAnyPrefab(this.gameObject))
         {
             PrefabUtility.UnpackPrefabInstance(this.gameObject, PrefabUnpackMode.Completely, InteractionMode.AutomatedAction);

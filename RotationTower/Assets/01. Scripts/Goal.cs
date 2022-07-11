@@ -8,7 +8,8 @@ public class Goal : MonoBehaviour
     {
         if(other.tag == "Destination")
         {
-            Destroy(transform.parent.gameObject);
+            GameManager.Instance.NextStage();
+            Destroy(transform.parent.parent.gameObject);
         }
     }
 }

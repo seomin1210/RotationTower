@@ -56,14 +56,15 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Minimalist Map Builder\Scripts\Map Builder\EditModeInstanceBhv.cs" />
     <Compile Include="Assets\01. Scripts\Goal.cs" />
     <Compile Include="Assets\01. Scripts\MazeStageMove.cs" />
-    <Compile Include="Assets\01. Scripts\Ball.cs" />
-    <Compile Include="Assets\01. Scripts\StageMove.cs" />
     <Compile Include="Assets\Minimalist Map Builder\Scripts\Map Builder\MapBuilder.cs" />
+    <Compile Include="Assets\01. Scripts\Ball.cs" />
     <Compile Include="Assets\Minimalist Map Builder\Scripts\Sample Scene\CameraBhv.cs" />
-    <Compile Include="Assets\Minimalist Map Builder\Scripts\Map Builder\EditModeInstanceBhv.cs" />
     <Compile Include="Assets\Minimalist Map Builder\Scripts\Sample Scene\DirectionalLightBhv.cs" />
+    <Compile Include="Assets\01. Scripts\StageMove.cs" />
+    <Compile Include="Assets\01. Scripts\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
