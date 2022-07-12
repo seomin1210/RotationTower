@@ -10,7 +10,7 @@ public class Goal : MonoBehaviour
     {
         if(other.tag == "Destination" && isBeSavePoint == false)
         {
-            GameManager.Instance.NextStage();
+            GameManager.Instance.ClearStage();
             Destroy(transform.parent.parent.gameObject);
         }
         if (other.tag == "SavePoint" && isBeSavePoint == true)
@@ -19,7 +19,7 @@ public class Goal : MonoBehaviour
         }
         if(other.tag == "Deadzone")
         {
-            GameManager.Instance.Die();
+            GameManager.Instance.RestartStage();
         }
     }
 }

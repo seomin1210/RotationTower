@@ -65,6 +65,7 @@
     <Compile Include="Assets\Minimalist Map Builder\Scripts\Sample Scene\DirectionalLightBhv.cs" />
     <Compile Include="Assets\01. Scripts\GameManager.cs" />
     <Compile Include="Assets\01. Scripts\StageMove.cs" />
+    <Compile Include="Assets\_Heathen Engineering\Samples\UX Examples\Flat Icons [Free]\ToggleSetAnimatorBoolean.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -86,6 +87,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Minimalist Free v2.4.2\Shaders\BuiltInRenderPipeline\Minimalist Standard LocalSpace.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\_Heathen Engineering\Documentation\UX\Flat Icons [Free]\Read Me.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Minimalist Free v2.4.2\Shaders\LightweightRenderPipeline\Minimalist Standard LocalSpace LWRP.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />

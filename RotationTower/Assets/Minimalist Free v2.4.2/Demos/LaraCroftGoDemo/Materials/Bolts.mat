@@ -150,16 +150,17 @@ Material:
     - _UVSec: 0
     - _UnityFogEnable: 0
     - _ZWrite: 1
+    - _ZWriteOverride: 0
     m_Colors:
     - _AOColor: {r: 1, g: 1, b: 1, a: 1}
     - _AmbientColor: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color1_B: {r: 1, g: 1, b: 1, a: 1}
     - _Color1_D: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1_F: {r: 0.32156864, g: 0.18039216, b: 0.078431375, a: 1}
+    - _Color1_F: {r: 0.29622638, g: 0.6077329, b: 1, a: 1}
     - _Color1_L: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1_R: {r: 0.2784314, g: 0.16078432, b: 0.05882353, a: 1}
-    - _Color1_T: {r: 0.75686276, g: 0.36078432, b: 0, a: 1}
+    - _Color1_R: {r: 0.07251688, g: 0.21619552, b: 0.3962264, a: 1}
+    - _Color1_T: {r: 0.83194596, g: 0.7018868, b: 1, a: 1}
     - _Color2_B: {r: 1, g: 1, b: 1, a: 1}
     - _Color2_D: {r: 1, g: 1, b: 1, a: 1}
     - _Color2_F: {r: 1, g: 1, b: 1, a: 1}
@@ -185,3 +186,4 @@ Material:
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
     - _TintColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
