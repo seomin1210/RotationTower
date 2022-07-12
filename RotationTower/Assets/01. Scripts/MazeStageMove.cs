@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class MazeStageMove : MonoBehaviour
 {
-    private float add = 60f;
+    private float add = 90f;
 
     private Vector3 mousePosition = Vector3.zero;
     private Vector3 newMousePosition = Vector3.zero;
@@ -11,17 +11,19 @@ public class MazeStageMove : MonoBehaviour
 
     private void Update()
     {
-
-        if (Input.GetMouseButtonDown(0))
+        if(GameManager.Instance.isOpenSetting == false)
         {
-            mousePosition = Camera.main.ScreenToViewportPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z) * add);
-        }
-        if (Input.GetMouseButton(0))
-        {
-            newMousePosition = Camera.main.ScreenToViewportPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z) * add);
-            if ((newMousePosition - mousePosition * add) != Vector3.zero)
+            if (Input.GetMouseButtonDown(0))
             {
-                MoveStage(newMousePosition - mousePosition);
+                mousePosition = Camera.main.ScreenToViewportPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z) * add);
+            }
+            if (Input.GetMouseButton(0))
+            {
+                newMousePosition = Camera.main.ScreenToViewportPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z) * add);
+                if ((newMousePosition - mousePosition * add) != Vector3.zero)
+                {
+                    MoveStage(newMousePosition - mousePosition);
+                }
             }
         }
     }
@@ -42,6 +44,20 @@ public class MazeStageMove : MonoBehaviour
 
     //void Update()
     //{
-    //    transform.Rotate(Input.gyro.rotationRateUnbiased.x, Input.gyro.rotationRateUnbiased.y, Input.gyro.rotationRateUnbiased.z);
+    //    //float x = Input.gyro.rotationRateUnbiased.x;
+    //    //float z = Input.gyro.rotationRateUnbiased.z;
+    //    //if (x >= 30f) x = 30f;
+    //    //else if (x <= -30f) x = -30f;
+    //    //if (z >= 30f) z = 30f;
+    //    //else if (z <= -30f) z = -30f;
+    //    //transform.Rotate(-x, 0f, z);
+
+    //    Quaternion q = Input.gyro.attitude;
+    //    q.y = 0f;
+    //    if (q.x >= 30f) q.x = 30f;
+    //    else if (q.x <= -30f) q.x = -30f;
+    //    if (q.z >= 30f) q.z = 30f;
+    //    else if (q.z <= -30f) q.z = -30f;
+    //    gameObject.transform.rotation = q;
     //}
 }

@@ -8,13 +8,15 @@ public class GameManager : MonoBehaviour
     public int stage = 0;
     public List<GameObject> stageList = new List<GameObject>();
 
-    private bool isOpenSetting = false;
+    public bool isOpenSetting = false;
+    public GameObject setting = null;
 
     private void Start()
     {
         if (Instance != null)
             Debug.LogError("GameManager is Multi Playing");
         Instance = this;
+        CloseSetting();
     }
 
     private void Update()
@@ -40,10 +42,18 @@ public class GameManager : MonoBehaviour
     public void OpenSetting()
     {
         isOpenSetting = true;
+        Time.timeScale = 0f;
+        setting.SetActive(true);
     }
 
     public void CloseSetting()
     {
         isOpenSetting = false;
+        Time.timeScale = 1f;
+        setting.SetActive(false);
+    }
+    public void Die()
+    {
+
     }
 }

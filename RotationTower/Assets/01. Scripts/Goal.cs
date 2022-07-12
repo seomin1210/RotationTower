@@ -4,12 +4,22 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
+    public bool isBeSavePoint = false;
+
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Destination")
+        if(other.tag == "Destination" && isBeSavePoint == false)
         {
             GameManager.Instance.NextStage();
             Destroy(transform.parent.parent.gameObject);
+        }
+        if (other.tag == "SavePoint" && isBeSavePoint == true)
+        {
+            isBeSavePoint = false;
+        }
+        if(other.tag == "Deadzone")
+        {
+            GameManager.Instance.Die();
         }
     }
 }

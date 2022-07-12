@@ -57,6 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Minimalist Map Builder\Editor\MapBuilderEditor.cs" />
+    <Compile Include="Assets\Minimalist Free v2.4.2\Editor\MinimalistStandardEditor.cs" />
+    <Compile Include="Assets\Minimalist Free v2.4.2\Editor\MinimalistClipboard.cs" />
+    <Compile Include="Assets\Minimalist Free v2.4.2\Editor\MinimalistSkyEditor.cs" />
+    <Compile Include="Assets\Minimalist Free v2.4.2\Editor\EditorGUILayoutExtended.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
