@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 6bc14fc0e7882c745b2303f9d51515da, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: f3fcc732e2832884a84d72aa20dd0daf, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.13061053, g: 0.36372012, b: 0.55354017, a: 1}
+  m_IndirectSpecularColor: {r: 0.34865373, g: 0.2816237, b: 0.29926047, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1342,6 +1342,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CastleModel
       objectReference: {fileID: 0}
+    - target: {fileID: 100048, guid: 243c24d122b9c3845b770b9fc95effa4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400048, guid: 243c24d122b9c3845b770b9fc95effa4, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1517,7 +1521,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1626,27 +1630,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 0
   stageList:
-  - {fileID: 8225083749681977636, guid: ac39f650e2814214da25a2993a49e087, type: 3}
-  - {fileID: 544437150039927572, guid: 3a5ed5ea78d21a244bb021ccdce641a6, type: 3}
-  - {fileID: 5336258351397666135, guid: 5723ba589bdcb744094762be40f714f9, type: 3}
-  - {fileID: 3378301970719143063, guid: 869de503f4590b5438d739406d73c8a4, type: 3}
-  - {fileID: 4366075260127117046, guid: 440653bca8862bb49ae995d5de74a695, type: 3}
-  - {fileID: 5284696006357303985, guid: 4ab845d152e23c2428593d489e9bbd1d, type: 3}
-  - {fileID: 9096094087864820439, guid: 508d82f6dbd4f0d42bc62fa4acc6b0e5, type: 3}
-  - {fileID: 326669589852740424, guid: 48dd128ed89b9f341b856c864a2599ed, type: 3}
-  - {fileID: 2566403691182911346, guid: c0d8640bdd405424181231664db0a586, type: 3}
-  - {fileID: 1812385675143788799, guid: 5b4d08e5cecc0cd4786a435cc828a444, type: 3}
-  - {fileID: 2345836360548173857, guid: 247c6f1bfb37b5f45b77c073dd78613f, type: 3}
-  - {fileID: 6547475071689995689, guid: 76c28c697ade39445b3da2f1a3fa809a, type: 3}
-  - {fileID: 3006327854151051069, guid: 1c80eded56b44504faa125ded1450e3a, type: 3}
-  - {fileID: 3135116299131152311, guid: c175f76cc42291d4b9b666602efd91f1, type: 3}
-  - {fileID: 8051837356680044464, guid: 78500c88c9558c240ac728a2ff74f964, type: 3}
-  - {fileID: 681293195500612666, guid: 8568fd49e922fbc4f87057de7a86c70b, type: 3}
-  - {fileID: 209125898689389725, guid: b4dc1f14e7f502f4a9bbc2d85a08e836, type: 3}
-  - {fileID: 4262936755350251216, guid: d6c7c57d700a0804aa2d6cc377e94848, type: 3}
-  - {fileID: 7535058720842897211, guid: 9fe2c51ee0ecc5b4f9b76d1f3774e337, type: 3}
-  - {fileID: 5718487043219846064, guid: 31eeb23a7d0aab2459d072e08d51fb86, type: 3}
-  - {fileID: 2074222603843168021, guid: bdfcd33b5b1207e4d8e66f255bc1ccd2, type: 3}
+  - {fileID: 6748458277616160250, guid: ac39f650e2814214da25a2993a49e087, type: 3}
+  - {fileID: 8364136626821043790, guid: 3a5ed5ea78d21a244bb021ccdce641a6, type: 3}
+  - {fileID: 604732512156688142, guid: 5723ba589bdcb744094762be40f714f9, type: 3}
+  - {fileID: 188745304540628926, guid: e30cb4cc51572494fa9310d263c0876e, type: 3}
+  - {fileID: 8829756923067657294, guid: 440653bca8862bb49ae995d5de74a695, type: 3}
+  - {fileID: 6226481011151187974, guid: 4ab845d152e23c2428593d489e9bbd1d, type: 3}
+  - {fileID: 7439113880928098163, guid: 508d82f6dbd4f0d42bc62fa4acc6b0e5, type: 3}
+  - {fileID: 5508666261155535648, guid: 48dd128ed89b9f341b856c864a2599ed, type: 3}
+  - {fileID: 9104366178810992691, guid: c0d8640bdd405424181231664db0a586, type: 3}
+  - {fileID: 6509770456442841387, guid: 5b4d08e5cecc0cd4786a435cc828a444, type: 3}
+  - {fileID: 3292295207367661068, guid: 247c6f1bfb37b5f45b77c073dd78613f, type: 3}
+  - {fileID: 4814482531444533153, guid: 76c28c697ade39445b3da2f1a3fa809a, type: 3}
+  - {fileID: 3022729100395422411, guid: 1c80eded56b44504faa125ded1450e3a, type: 3}
+  - {fileID: 8334553202435904665, guid: c175f76cc42291d4b9b666602efd91f1, type: 3}
+  - {fileID: 7468859557338654774, guid: 78500c88c9558c240ac728a2ff74f964, type: 3}
+  - {fileID: 8294238335180519555, guid: 8568fd49e922fbc4f87057de7a86c70b, type: 3}
+  - {fileID: 8180071422009755159, guid: b4dc1f14e7f502f4a9bbc2d85a08e836, type: 3}
+  - {fileID: 1767381425368801792, guid: d6c7c57d700a0804aa2d6cc377e94848, type: 3}
+  - {fileID: 457712535743699579, guid: 9fe2c51ee0ecc5b4f9b76d1f3774e337, type: 3}
+  - {fileID: 3199633045770158598, guid: 31eeb23a7d0aab2459d072e08d51fb86, type: 3}
+  - {fileID: 6712052334542121128, guid: bdfcd33b5b1207e4d8e66f255bc1ccd2, type: 3}
   start: {fileID: 484654468}
   tower: {fileID: 1306726127}
   isOpenSetting: 0
@@ -2058,7 +2062,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1558853703
 RectTransform:
   m_ObjectHideFlags: 0
