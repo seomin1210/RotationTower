@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> stageList = new List<GameObject>();
 
     public GameObject start = null;
+    public GameObject tower = null;
 
     public bool isOpenSetting = false;
     public GameObject setting = null;
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
     {
         stage = select - 2; //1스테이지 선택 -> -1 NextStage() 시 ++stage로 리스트의 0번째(1스테이지) 실행
         start.SetActive(false);
+        tower.SetActive(false);
         isGameStart = true;
         NextStage();
     }
@@ -62,6 +64,7 @@ public class GameManager : MonoBehaviour
         CloseSetting();
         Destroy(FindObjectOfType<MazeStageMove>().gameObject);
         start.SetActive(true);
+        tower.SetActive(true);
     }
 
     public void NextStage()

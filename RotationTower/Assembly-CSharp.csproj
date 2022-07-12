@@ -65,6 +65,7 @@
     <Compile Include="Assets\Minimalist Map Builder\Scripts\Sample Scene\DirectionalLightBhv.cs" />
     <Compile Include="Assets\01. Scripts\GameManager.cs" />
     <Compile Include="Assets\01. Scripts\StageMove.cs" />
+    <Compile Include="Assets\01. Scripts\BackTower.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
