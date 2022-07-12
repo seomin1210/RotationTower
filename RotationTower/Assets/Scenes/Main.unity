@@ -1651,6 +1651,7 @@ MonoBehaviour:
   - {fileID: 457712535743699579, guid: 9fe2c51ee0ecc5b4f9b76d1f3774e337, type: 3}
   - {fileID: 3199633045770158598, guid: 31eeb23a7d0aab2459d072e08d51fb86, type: 3}
   - {fileID: 6712052334542121128, guid: bdfcd33b5b1207e4d8e66f255bc1ccd2, type: 3}
+  - {fileID: 7829989319926255753, guid: b1ef90ebbc007fe4498f96d0fe59269c, type: 3}
   start: {fileID: 484654468}
   tower: {fileID: 1306726127}
   isOpenSetting: 0

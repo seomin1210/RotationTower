@@ -59,13 +59,12 @@
     <Compile Include="Assets\Minimalist Map Builder\Scripts\Map Builder\EditModeInstanceBhv.cs" />
     <Compile Include="Assets\01. Scripts\Goal.cs" />
     <Compile Include="Assets\01. Scripts\MazeStageMove.cs" />
+    <Compile Include="Assets\01. Scripts\BackTower.cs" />
     <Compile Include="Assets\Minimalist Map Builder\Scripts\Map Builder\MapBuilder.cs" />
-    <Compile Include="Assets\01. Scripts\Ball.cs" />
     <Compile Include="Assets\Minimalist Map Builder\Scripts\Sample Scene\CameraBhv.cs" />
     <Compile Include="Assets\Minimalist Map Builder\Scripts\Sample Scene\DirectionalLightBhv.cs" />
     <Compile Include="Assets\01. Scripts\GameManager.cs" />
     <Compile Include="Assets\01. Scripts\StageMove.cs" />
-    <Compile Include="Assets\01. Scripts\BackTower.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
