@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "357624420751",
+    "project_id": "rotationtower",
+    "firebase_url": "https://rotationtower-default-rtdb.firebaseio.com/",
+    "storage_bucket": "rotationtower.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:357624420751:android:185d8882bc8a83f144d3fa",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.RotationTower"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "357624420751-0qe2g4h0r8orerftpnjdoq9qr5b65i3s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCT-8rT09j9X8k-IF1o8OfmOuYrxcaZzgs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "357624420751-0qe2g4h0r8orerftpnjdoq9qr5b65i3s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

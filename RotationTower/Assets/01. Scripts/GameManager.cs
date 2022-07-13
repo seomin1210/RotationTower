@@ -15,23 +15,21 @@ public class GameManager : MonoBehaviour
 
     public bool isOpenSetting = false;
     public GameObject setting = null;
+    public GameObject restartButton = null;
+    public GameObject warning = null;
+
+    public string username = "Player";
+    public GameObject inputName = null;
+    public GameObject ranking = null;
 
     private bool isGameStart = false;
-    private List<bool> clearStage = new List<bool>();
+    private bool isDie = false;
 
     private void Start()
     {
         if (Instance != null)
             Debug.LogError("GameManager is Multi Playing");
         Instance = this;
-        if(clearStage.Count != stageList.Count)
-        {
-            for(int i = clearStage.Count; i < stageList.Count; i++)
-            {
-                clearStage.Add(false);
-            }
-        }
-        if(clearStage[0] == false) clearStage[0] = true;
         CloseSetting();
     }
 
@@ -39,7 +37,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(isOpenSetting == false)
+            if(isOpenSetting == false && isDie == false)
             {
                 OpenSetting();
             }
@@ -52,10 +50,6 @@ public class GameManager : MonoBehaviour
 
     public void GameStart(int select)
     {
-        if(select != 1)
-        {
-            if (clearStage[select - 2] == false) return;
-        }
         stage = select - 2; //1스테이지 선택 -> -1 NextStage() 시 ++stage로 리스트의 0번째(1스테이지) 실행
         start.SetActive(false);
         tower.SetActive(false);
@@ -68,26 +62,26 @@ public class GameManager : MonoBehaviour
     {
         if(isGameStart == true)
         {
-            GoMenu();
+            Warning();
             return;
         }
         Application.Quit();
     }
 
-    private void GoMenu()
+    private void Warning()
+    {
+        warning.SetActive(true);
+    }
+
+    public void GoMenu()
     {
         isGameStart = false;
         CloseSetting();
         floor.gameObject.SetActive(false);
+        ranking.SetActive(false);
         Destroy(FindObjectOfType<MazeStageMove>().gameObject);
         start.SetActive(true);
         tower.SetActive(true);
-    }
-
-    public void ClearStage()
-    {
-        clearStage[stage] = true;
-        NextStage();
     }
 
     public void NextStage()
@@ -108,6 +102,14 @@ public class GameManager : MonoBehaviour
         isOpenSetting = true;
         Time.timeScale = 0f;
         setting.SetActive(true);
+        if (isGameStart == false)
+        {
+            restartButton.SetActive(false);
+        }
+        else
+        {
+            restartButton.SetActive(true);
+        }
     }
 
     public void CloseSetting()
@@ -115,10 +117,25 @@ public class GameManager : MonoBehaviour
         isOpenSetting = false;
         Time.timeScale = 1f;
         setting.SetActive(false);
+        warning.SetActive(false);
     }
 
-    public void Init()
+    public void Die()
     {
-        
+        isDie = true;
+        if (username == null || username == "Player")
+        {
+            inputName.SetActive(true);
+        }
+        else
+        {
+            AddRanking();
+        }
+    }
+
+    public void AddRanking()
+    {
+        ranking.SetActive(true);
+        CFireBase.Instance.writeNewUser(username, stage);
     }
 }
