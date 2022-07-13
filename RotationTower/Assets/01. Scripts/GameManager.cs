@@ -25,12 +25,20 @@ public class GameManager : MonoBehaviour
     private bool isGameStart = false;
     private bool isDie = false;
 
+    private bool firstGame = true;
+    public GameObject help = null;
+
     private void Start()
     {
         if (Instance != null)
             Debug.LogError("GameManager is Multi Playing");
         Instance = this;
         CloseSetting();
+        if(firstGame == true)
+        {
+            firstGame = false;
+            OpenHelp();
+        }
     }
 
     private void Update()
@@ -143,5 +151,15 @@ public class GameManager : MonoBehaviour
     {
         ranking.SetActive(true);
         CFireBase.Instance.roading.text = "Loading..";
+    }
+
+    public void OpenHelp()
+    {
+        help.SetActive(true);
+    }
+
+    public void CloseHelp()
+    {
+        help.SetActive(false);
     }
 }

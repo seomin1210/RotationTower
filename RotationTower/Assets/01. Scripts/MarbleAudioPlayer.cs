@@ -9,11 +9,13 @@ public class MarbleAudioPlayer : AudioPlayer
 
     public void PlayRoll()
     {
+        _audioSource.loop = true;
         PlayClip(rollSound);
     }
 
     public void PlayCrash()
     {
+        _audioSource.loop = false;
         PlayClip(crashSound);
     }
 }
