@@ -71,4 +71,4 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
-/RotationTower/Assets/Firebase/Plugins/x86_64/FirebaseCppApp-9_1_0.bundle
+/Assets/Firebase/Plugins/x86_64/FirebaseCppApp-9_1_0.bundle
