@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
         CloseSetting();
         floor.gameObject.SetActive(false);
         ranking.SetActive(false);
-        Destroy(FindObjectOfType<MazeStageMove>().gameObject);
+        Destroy(FindObjectOfType<MazeStageMove>()?.gameObject);
         start.SetActive(true);
         tower.SetActive(true);
     }
@@ -137,5 +137,11 @@ public class GameManager : MonoBehaviour
     {
         ranking.SetActive(true);
         CFireBase.Instance.writeNewUser(username, stage);
+    }
+    
+    public void OpenRanking()
+    {
+        ranking.SetActive(true);
+        CFireBase.Instance.roading.text = "Loading..";
     }
 }

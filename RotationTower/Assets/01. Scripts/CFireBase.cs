@@ -8,6 +8,7 @@ using Firebase.Database;
 using Firebase.Unity;
 using TMPro;
 using System;
+using System.Linq;
 public class CFireBase : MonoBehaviour
 {
     public static CFireBase Instance;
@@ -22,16 +23,23 @@ public class CFireBase : MonoBehaviour
             this.score = score;
         }
     }
-
     DatabaseReference reference;
 
     public TextMeshProUGUI roading = null;
     public TextMeshProUGUI[] rank = new TextMeshProUGUI[7];
 
-    private string[] strRank;
+    public string[] strRank;
     private long strLen;
 
     private bool textLoadBool = false;
+
+    public struct UserData
+    {
+        public string name;
+        public int score;
+    }
+
+    public UserData[] userData;
 
     void Awake()
     {
@@ -81,13 +89,14 @@ public class CFireBase : MonoBehaviour
                 int cnt = 0;
                 strLen = snapshot.ChildrenCount;
                 strRank = new string[strLen];
+                userData = new UserData[strLen];
 
                 foreach (DataSnapshot data in snapshot.Children)
                 {
                     //받은 데이터들을 하나씩 잘라 배열에 저장
                     IDictionary rankInfo = (IDictionary)data.Value;
-
-                    strRank[cnt] = rankInfo["username"].ToString() + " | " + string.Format("{0:N2}", rankInfo["score"]);
+                    userData[cnt].name = rankInfo["username"].ToString();
+                    userData[cnt].score = Int32.Parse(rankInfo["score"].ToString());
                     cnt++;
                 }
                 //LateUpdate의 TextLoad() 함수 실행
@@ -98,21 +107,18 @@ public class CFireBase : MonoBehaviour
 
     private void TextLoad()
     {
+        int cnt = 0;
         textLoadBool = false;
-        try
+        List<UserData> SortedList = userData.OrderByDescending(x => x.score).ToList();
+
+        foreach(var data in SortedList)
         {
-            //  Array.Sort(strRank, (x, y) => string.Compare(
-            // y.Substring(y.Length - 5, 5).ToString() + x.Substring(x.Length - 5, 5).ToString(),
-            //x.Substring(x.Length - 5, 5).ToString() + y.Substring(y.Length - 5, 5).ToString()));
-            Array.Reverse(strRank);
-        }
-        catch(NullReferenceException e)
-        {
-            return;
-        }
+            strRank[cnt] = data.name + " | " + string.Format("{0}", data.score);
+            cnt++;
+         }
         for(int i = 0; i < rank.Length; i++)
         {
-            if (strLen <= i) return;
+            if (strLen <= i) break;
             rank[i].text = strRank[i];
         }
         roading.text = "Raking";

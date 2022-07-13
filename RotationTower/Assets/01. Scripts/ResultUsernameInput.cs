@@ -18,7 +18,7 @@ public class ResultUsernameInput : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Return))
+        if(nameInput.text.Length > 0 && Input.GetKeyDown(KeyCode.Return))
         {
             InputName();
         }
@@ -26,8 +26,8 @@ public class ResultUsernameInput : MonoBehaviour
 
     public void InputName()
     {
-        if (nameInput.text.Length > 6) return;
-        if (nameInput.text.Length <= 0) nameInput.text = "Player";
+        if (nameInput.text.Length > 10) return;
+        if (nameInput.text.Length <= 0) return;
         playerName = nameInput.text;
         GameManager.Instance.username = playerName;
         thisObject.SetActive(false);
