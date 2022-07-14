@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,6 +33,11 @@ public class GameManager : MonoBehaviour
     private bool isTimeAttack = false;
     private float time = 0f;
     public TextMeshProUGUI timeText = null;
+
+    private bool isMuteAudio = false;
+    public Image audioImage = null;
+    public AudioMixer mainMixer = null;
+    public Sprite[] audioImages = new Sprite[2];
 
     private void Start()
     {
@@ -195,5 +202,31 @@ public class GameManager : MonoBehaviour
     public void CloseHelp()
     {
         help.SetActive(false);
+    }
+
+    public void AudioButton()
+    {
+        if(isMuteAudio == true)
+        {
+            OnAudio();
+        }
+        else
+        {
+            MuteAudio();
+        }
+    }
+
+    private void MuteAudio()
+    {
+        isMuteAudio = true;
+        mainMixer.SetFloat("Master", 0f);
+        audioImage.sprite = audioImages[1];
+    }
+
+    private void OnAudio()
+    {
+        isMuteAudio = false;
+        mainMixer.SetFloat("Master", 1f);
+        audioImage.sprite = audioImages[0];
     }
 }
