@@ -94,17 +94,20 @@ public class CFireBase : MonoBehaviour
         cnt = 0;
         User user = new User(username, score.ToString());
         string json = JsonUtility.ToJson(user);
-        foreach (var data in userData)
+        if(userData != null)
         {
-            if(data.name == username)
+            foreach (var data in userData)
             {
-                if(data.score < score)
+                if (data.name == username)
                 {
-                    reference.Child("rank").Child(username).SetRawJsonValueAsync(json);
+                    if (data.score < score)
+                    {
+                        reference.Child("rank").Child(username).SetRawJsonValueAsync(json);
+                    }
+                    reference.OrderByChild("rank");
+                    roading.text = "Loading..";
+                    return;
                 }
-                reference.OrderByChild("rank");
-                roading.text = "Loading..";
-                return;
             }
         }
         reference.Child("rank").Child(username).SetRawJsonValueAsync(json);

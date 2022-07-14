@@ -63,6 +63,7 @@
     <Compile Include="Assets\01. Scripts\BackTower.cs" />
     <Compile Include="Assets\Minimalist Map Builder\Scripts\Map Builder\MapBuilder.cs" />
     <Compile Include="Assets\01. Scripts\AudioPlayer.cs" />
+    <Compile Include="Assets\01. Scripts\BGMPlayer.cs" />
     <Compile Include="Assets\01. Scripts\MarbleAudioPlayer.cs" />
     <Compile Include="Assets\Minimalist Map Builder\Scripts\Sample Scene\CameraBhv.cs" />
     <Compile Include="Assets\01. Scripts\CFireBase.cs" />
@@ -71,7 +72,6 @@
     <Compile Include="Assets\01. Scripts\ResultUsernameInput.cs" />
     <Compile Include="Assets\01. Scripts\GameManager.cs" />
     <Compile Include="Assets\01. Scripts\StageMove.cs" />
-    <Compile Include="Assets\01. Scripts\BGMPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
