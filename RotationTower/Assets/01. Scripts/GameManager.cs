@@ -28,6 +28,10 @@ public class GameManager : MonoBehaviour
     private bool firstGame = true;
     public GameObject help = null;
 
+    private bool isTimeAttack = false;
+    private float time = 0f;
+    public TextMeshProUGUI timeText = null;
+
     private void Start()
     {
         if (Instance != null)
@@ -52,6 +56,20 @@ public class GameManager : MonoBehaviour
             else
             {
                 CloseSetting();
+            }
+        }
+        if(isTimeAttack == true)
+        {
+            if(time > 0f)
+            {
+                time -= Time.deltaTime;
+                UpdateTimeUI();
+            }
+            else
+            {
+                time = 0;
+                isTimeAttack = false;
+                Die();
             }
         }
     }
@@ -96,6 +114,22 @@ public class GameManager : MonoBehaviour
     {
         Instantiate(stageList[++stage], null);
         floor.SetText((stage + 1) + "F");
+        if(stage < 30)
+        {
+            isTimeAttack = true;
+            time = 150f;
+            timeText.gameObject.SetActive(true);
+        }
+        else if(stage >= 30 && isTimeAttack == true)
+        {
+            isTimeAttack = false;
+            timeText.gameObject.SetActive(false);
+        }
+    }
+
+    private void UpdateTimeUI()
+    {
+        timeText.text = string.Format("{0:N1}", time);
     }
 
     public void RestartStage()
