@@ -66,9 +66,45 @@ public class CFireBase : MonoBehaviour
 
     public void writeNewUser(string username, int score)
     {
-        User user = new User(username, score.ToString());
-        string json = JsonUtility.ToJson(user);
-        reference.Child("rank").Child(username).SetRawJsonValueAsync(json);
+        int cnt = 0;
+        reference.Child("rank").GetValueAsync().ContinueWith(task =>
+        {
+            if (task.IsFaulted)
+            {
+                //에러 데이터로드 실패 시 다시 데이터 로드
+                DataLoad();
+            }
+            else if (task.IsCompleted)
+            {
+                DataSnapshot snapshot = task.Result;
+
+                strLen = snapshot.ChildrenCount;
+                userData = new UserData[strLen];
+
+                foreach (DataSnapshot data in snapshot.Children)
+                {
+                    //받은 데이터들을 하나씩 잘라 배열에 저장
+                    IDictionary rankInfo = (IDictionary)data.Value;
+                    userData[cnt].name = rankInfo["username"].ToString();
+                    userData[cnt].score = Int32.Parse(rankInfo["score"].ToString());
+                    cnt++;
+                }
+            }
+        });
+        cnt = 0;
+        foreach (var data in userData)
+        {
+            if(data.name == username)
+            {
+                if(data.score < score)
+                {
+                    User user = new User(username, score.ToString());
+                    string json = JsonUtility.ToJson(user);
+                    reference.Child("rank").Child(username).SetRawJsonValueAsync(json);
+                }
+                break;
+            }
+        }
         reference.OrderByChild("rank");
         roading.text = "Loading..";
     }
