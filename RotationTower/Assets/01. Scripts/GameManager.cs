@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
     public AudioMixer mainMixer = null;
     public Sprite[] audioImages = new Sprite[2];
 
+    public GameObject clear = null;
     private void Start()
     {
         if (Instance != null)
@@ -119,6 +120,12 @@ public class GameManager : MonoBehaviour
 
     public void NextStage()
     {
+        if(stage >= stageList.Count - 1)
+        {
+            clear.SetActive(true);
+            Invoke("Die", 3f);
+            return;
+        }
         Instantiate(stageList[++stage], null);
         floor.SetText((stage + 1) + "F");
         if(stage < 30)
@@ -171,6 +178,7 @@ public class GameManager : MonoBehaviour
 
     public void Die()
     {
+        clear.SetActive(false);
         isDie = true;
         if (username == null || username == "Player")
         {
