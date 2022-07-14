@@ -265,7 +265,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: b39beafb8aaa965b2da7ccfc4db13e88
+      Hash: 67f37180e5f6459b0a3d51cb3256dbf6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Goal
@@ -889,7 +889,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 074a77b94f886c12eff0138e931c4905
+      Hash: 7aac7edb88a2d959a4a6357a73b9f954
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager

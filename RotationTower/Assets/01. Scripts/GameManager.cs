@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 
-public class GameManager : MonoBehaviour
+public class GameManager : AudioPlayer
 {
     public static GameManager Instance;
     public int stage = 0;
@@ -41,6 +41,9 @@ public class GameManager : MonoBehaviour
     private BGMPlayer bgm;
 
     public GameObject clear = null;
+
+    [SerializeField]
+    private AudioClip clearSound;
     private void Start()
     {
         if (Instance != null)
@@ -241,5 +244,10 @@ public class GameManager : MonoBehaviour
         isMuteAudio = false;
         mainMixer.SetFloat("Master", 1f);
         audioImage.sprite = audioImages[0];
+    }
+
+    public void OnClearSound()
+    {
+        PlayClip(clearSound);
     }
 }

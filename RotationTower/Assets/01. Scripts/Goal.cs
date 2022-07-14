@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Goal : MonoBehaviour
+public class Goal : AudioPlayer
 {
     public bool isBeSavePoint = false;
 
@@ -10,6 +10,7 @@ public class Goal : MonoBehaviour
     {
         if(other.tag == "Destination" && isBeSavePoint == false)
         {
+            GameManager.Instance.OnClearSound();
             GameManager.Instance.NextStage();
             Destroy(transform.parent.parent.gameObject);
         }
