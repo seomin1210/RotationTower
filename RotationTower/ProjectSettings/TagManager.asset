@@ -7,6 +7,7 @@ TagManager:
   - Destination
   - Deadzone
   - SavePoint
+  - Cube
   layers:
   - Default
   - TransparentFX

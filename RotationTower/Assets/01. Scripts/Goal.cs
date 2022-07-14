@@ -22,5 +22,9 @@ public class Goal : MonoBehaviour
             Destroy(transform.parent.gameObject);
             GameManager.Instance.Die();
         }
+        if(other.tag == "Cube")
+        {
+            Destroy(other.gameObject);
+        }
     }
 }
