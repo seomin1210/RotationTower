@@ -71,6 +71,7 @@
     <Compile Include="Assets\01. Scripts\ResultUsernameInput.cs" />
     <Compile Include="Assets\01. Scripts\GameManager.cs" />
     <Compile Include="Assets\01. Scripts\StageMove.cs" />
+    <Compile Include="Assets\01. Scripts\BGMPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

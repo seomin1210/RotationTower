@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     public Image audioImage = null;
     public AudioMixer mainMixer = null;
     public Sprite[] audioImages = new Sprite[2];
+    private BGMPlayer bgm;
 
     public GameObject clear = null;
     private void Start()
@@ -45,12 +46,14 @@ public class GameManager : MonoBehaviour
         if (Instance != null)
             Debug.LogError("GameManager is Multi Playing");
         Instance = this;
+        bgm = gameObject.transform.parent.GetComponentInChildren<BGMPlayer>();
         CloseSetting();
         if(firstGame == true)
         {
             firstGame = false;
             OpenHelp();
         }
+        bgm.OnStartBGM();
     }
 
     private void Update()
@@ -89,6 +92,7 @@ public class GameManager : MonoBehaviour
         tower.SetActive(false);
         floor.gameObject.SetActive(true);
         isGameStart = true;
+        bgm.OnGameBGM();
         NextStage();
     }
 
@@ -116,6 +120,7 @@ public class GameManager : MonoBehaviour
         Destroy(FindObjectOfType<MazeStageMove>()?.gameObject);
         start.SetActive(true);
         tower.SetActive(true);
+        bgm.OnStartBGM();
     }
 
     public void NextStage()

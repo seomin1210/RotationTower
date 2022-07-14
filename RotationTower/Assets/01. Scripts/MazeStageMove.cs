@@ -30,10 +30,10 @@ public class MazeStageMove : MonoBehaviour
 
     protected virtual void MoveStage(Vector3 pos)
     {
-        if (pos.y >= 30f) pos.y = 30f;
-        else if (pos.y <= -30f) pos.y = -30f;
-        if (pos.x >= 30f) pos.x = 30f;
-        else if (pos.x <= -30f) pos.x = -30f;
+        if (pos.y >= 40f) pos.y = 40f;
+        else if (pos.y <= -40f) pos.y = -40f;
+        if (pos.x >= 40f) pos.x = 40f;
+        else if (pos.x <= -40f) pos.x = -40f;
         this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.Euler(pos.y, 0f, -pos.x), 1f * Time.deltaTime);
     }
 

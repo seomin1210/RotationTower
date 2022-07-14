@@ -1752,7 +1752,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC774\uB984\uC744 \uC785\uB825\uD574\uC8FC\uC138\uC694.\n\n10\uC790 \uC774\uB0B4"
+  m_Text: "\uC774\uB984\uC744 \uC785\uB825\uD574\uC8FC\uC138\uC694.\n\n\uD55C\uAE00\uC740
+    \uC778\uC2DD\uC774 \uB418\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.\n10\uC790 \uC774\uB0B4"
 --- !u!222 &436701078
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7402,6 +7403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1849808232}
   - component: {fileID: 1849808233}
+  - component: {fileID: 1849808234}
   m_Layer: 0
   m_Name: BGM
   m_TagString: Untagged
@@ -7433,8 +7435,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 233120492158790202, guid: ca6ac52006841b04fad3178686389730, type: 2}
-  m_audioClip: {fileID: 8300000, guid: ebdef9b2a10619841a52072baa621489, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -7519,6 +7521,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1849808234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849808231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a82d6f692bc3278408cd4d0a6e01c4b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pitchRandomness: 0.2
+  startBGM: {fileID: 8300000, guid: ebdef9b2a10619841a52072baa621489, type: 3}
+  gameBGM: {fileID: 8300000, guid: 7e5bababdd5f46647b2970dd307d2d62, type: 3}
 --- !u!1 &1874527817
 GameObject:
   m_ObjectHideFlags: 0

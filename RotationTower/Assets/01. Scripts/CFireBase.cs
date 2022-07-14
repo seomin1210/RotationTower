@@ -72,7 +72,7 @@ public class CFireBase : MonoBehaviour
             if (task.IsFaulted)
             {
                 //에러 데이터로드 실패 시 다시 데이터 로드
-                DataLoad();
+                writeNewUser(username, score);
             }
             else if (task.IsCompleted)
             {
@@ -92,19 +92,22 @@ public class CFireBase : MonoBehaviour
             }
         });
         cnt = 0;
+        User user = new User(username, score.ToString());
+        string json = JsonUtility.ToJson(user);
         foreach (var data in userData)
         {
             if(data.name == username)
             {
                 if(data.score < score)
                 {
-                    User user = new User(username, score.ToString());
-                    string json = JsonUtility.ToJson(user);
                     reference.Child("rank").Child(username).SetRawJsonValueAsync(json);
                 }
-                break;
+                reference.OrderByChild("rank");
+                roading.text = "Loading..";
+                return;
             }
         }
+        reference.Child("rank").Child(username).SetRawJsonValueAsync(json);
         reference.OrderByChild("rank");
         roading.text = "Loading..";
     }
